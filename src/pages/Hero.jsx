@@ -1,5 +1,4 @@
-
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import archVideo from "/src/assets/arch.mp4"; 
 
 function Hero() {
@@ -7,15 +6,23 @@ function Hero() {
   const [progress, setProgress] = useState(0);
   const videoRef = useRef(null);
 
-  const handleVideoToggle = () => {
+  // Sync state with the actual HTML5 video element
+  useEffect(() => {
     if (!videoRef.current) return;
 
     if (isPlaying) {
-      videoRef.current.pause();
+      videoRef.current.play().catch((err) => {
+        console.log("Video play blocked or interrupted:", err);
+      });
     } else {
-      videoRef.current.play().catch((err) => console.log("Video play interrupted:", err));
+      videoRef.current.pause();
     }
-    setIsPlaying(!isPlaying);
+  }, [isPlaying]);
+
+  const handleVideoToggle = (e) => {
+    // Prevent accidental double-triggering if clicking elements inside
+    e.stopPropagation(); 
+    setIsPlaying((prev) => !prev);
   };
 
   const handleTimeUpdate = () => {
@@ -28,7 +35,6 @@ function Hero() {
   };
 
   return (
-    /* FIXED: Changed to relative z-30 so it scrolls upward completely OVER the sticky Navbar layout underneath */
     <div 
       onClick={handleVideoToggle}
       className={`relative z-30 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 -mt-32 text-center cursor-pointer transition-colors duration-700 ease-out shadow-[0_-20px_50px_rgba(0,0,0,0.3)] ${
@@ -48,7 +54,6 @@ function Hero() {
       {/* Background Video */}
       <video
         ref={videoRef}
-        autoPlay
         loop
         muted
         playsInline
@@ -56,7 +61,7 @@ function Hero() {
         className={`absolute inset-0 h-full w-full object-cover select-none transition-all duration-700 ease-out ${
           isPlaying 
             ? "scale-100 blur-0 opacity-100 brightness-100" 
-            : "scale-[1.02] blur-[8px] opacity-30 brightness-50 contrast-100"
+            : "scale-[1.02] blur-[0px] opacity-90 brightness-80 contrast-100"
         }`}
         style={{ zIndex: -2 }}
       >
@@ -64,7 +69,7 @@ function Hero() {
         Your browser does not support the video tag.
       </video>
 
-      {/* Dynamic Overlay Sheet to create the grayish tone on pause */}
+      {/* Dynamic Overlay Sheet */}
       <div 
         className={`absolute inset-0 transition-opacity duration-700 pointer-events-none ${
           isPlaying ? "bg-black/20 opacity-100" : "bg-zinc-900/50 opacity-0"
@@ -72,27 +77,12 @@ function Hero() {
         style={{ zIndex: -1 }}
       />
 
-      {/* Architectural Typography Layout (Only visible when paused) */}
-      <div 
-        className={`z-10 max-w-5xl select-none px-4 transition-all duration-700 ease-out pointer-events-none ${
-          isPlaying ? "opacity-0 scale-95 translate-y-4" : "opacity-100 scale-100 translate-y-0"
-        }`}
-      >
-        <h2 
-          className="text-4xl sm:text-6xl md:text-5xl lg:text-4xl leading-[1.15] uppercase font-serif font-light text-[#aab992]"
-        >
-          From <span className="text-[#e97100]">Imagining</span> To <span className="text-[#e97100]">Real Concrete</span> Form.<br />
-          DECODING NATURE AND ARCHITECTURE FOLLOWING THE OUTLINE EMBEDDED TO OUR
-          CIVILIZATION BY A MYSTERIOUS PROCESS NAMED CREATIVITY<span className="text-[#ff7b00]">.</span>
-        </h2>
-      </div>
-
-      {/* Bottom Right Control Container */}
-      <div className="absolute bottom-11 right-21 z-20">
-        {/* Pause Icon (Only visible when PLAYING) */}
+      {/* Bottom Right Control Container - Using layout classes instead of inset-0 on children */}
+      <div className="absolute bottom-11 right-21 z-20 w-14 h-14 flex items-center justify-center">
+        {/* Pause Icon */}
         <div 
-          className={`p-4 rounded-full bg-black/10 backdrop-blur-md border border-white/10 text-white transition-all duration-700 ease-out shadow-lg  ${
-            isPlaying ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-75 pointer-events-none translate-y-4 absolute inset-0"
+          className={`absolute p-4 rounded-full backdrop-blur-md border border-white/10 text-white transition-all duration-700 ease-out shadow-lg ${
+            isPlaying ? "opacity-100 scale-100 translate-y-0 visible" : "opacity-0 scale-75 translate-y-4 invisible pointer-events-none"
           }`}
         >
           <svg 
@@ -105,10 +95,10 @@ function Hero() {
           </svg>
         </div>
 
-        {/* Resume (Only visible when PAUSED) */}
+        {/* Resume Icon */}
         <div 
-          className={`p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-700 ease-out shadow-lg ${
-            isPlaying ? "opacity-0 scale-75 pointer-events-none translate-y-4 absolute inset-0" : "opacity-100 scale-100 translate-y-0"
+          className={`absolute p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-700 ease-out shadow-lg ${
+            isPlaying ? "opacity-0 scale-75 translate-y-4 invisible pointer-events-none" : "opacity-100 scale-100 translate-y-0 visible"
           }`}
         >
           <svg 

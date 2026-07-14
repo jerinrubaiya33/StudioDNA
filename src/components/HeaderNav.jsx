@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import logoImage from "/src/assets/studioDNA_logo.png"; 
 
 function HeaderNav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,10 +52,10 @@ function HeaderNav() {
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <a href="#" className="flex items-center">
+            {/* Using the compiled, safe logo asset here */}
             <img
-              src="/src/assets/studioDNA_logo.png"
+              src={logoImage}
               alt="Studio DNA Logo"
-              // Adjusted logo scaling behavior from h-22 down to a slim h-12
               className={`w-auto -ml-7.5 object-contain transition-all duration-300 ease-in-out brightness-0 invert ${
                 isScrolled ? "h-12 md:h-20" : "h-18 md:h-22"
               }`}

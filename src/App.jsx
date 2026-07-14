@@ -22,7 +22,7 @@ const MainLandingPage = () => (
     <Landing />
     <Features />
     <Project />
-    <Exhibition/>
+    {/* <Exhibition/> */}
     <Meet/>
     <Choose />
     <People/>

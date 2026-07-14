@@ -1,4 +1,4 @@
-import React from "react";
+import scratchBImage from "/src/assets/scratchB.png"; 
 
 function Navbar() {
   return (
@@ -23,8 +23,8 @@ function Navbar() {
         .animate-cascade { animation: fadeInCascade 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
       `}</style>
 
-      {/* MAIN INTRO SCREEN CONTENT */}
-      <main className="pt-24 md:pt-32 max-w-[1920px] mx-auto px-4 md:px-8 relative z-10">
+      {/* MAIN INTRO SCREEN CONTENT (Padding top modified to adjust layout height without the top bar spacing conflict) */}
+      <main className="pt-28 md:pt-36 max-w-[1920px] mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-2xl mb-8 md:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-3xl font-normal tracking-wide uppercase leading-[1.1] text-[#ffffff] animate-reveal-3 font-serif">
             <span className="text-[#ff7b00]">OUTLINE ARCHITECTS</span> IS{" "}
@@ -46,7 +46,7 @@ function Navbar() {
           <div className="md:col-span-4 space-y-4 animate-cascade [animation-delay:0.7s]">
             <div className="w-102 h-48 md:h-75 ml-165 -mt-76 overflow-hidden rounded-sm">
               <img
-                src="/src/assets/scratchB.png"
+                src={scratchBImage}
                 alt="Studio DNA Showcase"
                 className="w-full h-full object-cover opacity-90 grayscale-60 brightness-90 hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all duration-300"
               />
