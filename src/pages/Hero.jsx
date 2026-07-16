@@ -20,7 +20,6 @@ function Hero() {
   }, [isPlaying]);
 
   const handleVideoToggle = (e) => {
-    // Prevent accidental double-triggering if clicking elements inside
     e.stopPropagation(); 
     setIsPlaying((prev) => !prev);
   };
@@ -37,9 +36,10 @@ function Hero() {
   return (
     <div 
       onClick={handleVideoToggle}
-      className={`relative z-30 flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 -mt-32 text-center cursor-pointer transition-colors duration-700 ease-out shadow-[0_-20px_50px_rgba(0,0,0,0.3)] ${
-        isPlaying ? "bg-[#3c472b]" : "bg-[#2a2c2a]"
-      }`}
+      className={`relative z-30 flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-75 sm:pt-24 text-center cursor-pointer transition-colors duration-700 ease-out shadow-[0_-20px_50px_rgba(0,0,0,0.3)] 
+        w-full aspect-video md:h-auto md:min-h-screen 
+        -mt-20 sm:-mt-28 md:-mt-42 
+        ${isPlaying ? "bg-[#3c472b]" : "bg-[#2a2c2a]"}`}
     >
       {/* Top Progress Bar */}
       <div className="absolute top-0 left-0 w-full bg-black/5 h-[3px] z-30">
@@ -61,14 +61,14 @@ function Hero() {
         className={`absolute inset-0 h-full w-full object-cover select-none transition-all duration-700 ease-out ${
           isPlaying 
             ? "scale-100 blur-0 opacity-100 brightness-100" 
-            : "scale-[1.02] blur-[0px] opacity-90 brightness-80 contrast-100"
+            : "scale-[0.998] blur-[0px] opacity-90 brightness-80 contrast-100"
         }`}
         style={{ zIndex: -2 }}
       >
         <source src={archVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
+      
       {/* Dynamic Overlay Sheet */}
       <div 
         className={`absolute inset-0 transition-opacity duration-700 pointer-events-none ${
@@ -77,11 +77,11 @@ function Hero() {
         style={{ zIndex: -1 }}
       />
 
-      {/* Bottom Right Control Container - Using layout classes instead of inset-0 on children */}
-      <div className="absolute bottom-11 right-21 z-20 w-14 h-14 flex items-center justify-center">
+      {/* Bottom Right Control Container */}
+      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 md:bottom-11 md:right-21 z-20 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
         {/* Pause Icon */}
         <div 
-          className={`absolute p-4 rounded-full backdrop-blur-md border border-white/10 text-white transition-all duration-700 ease-out shadow-lg ${
+          className={`absolute p-3 sm:p-4 rounded-full backdrop-blur-md border border-white/10 text-white transition-all duration-700 ease-out shadow-lg ${
             isPlaying ? "opacity-100 scale-100 translate-y-0 visible" : "opacity-0 scale-75 translate-y-4 invisible pointer-events-none"
           }`}
         >
@@ -89,7 +89,7 @@ function Hero() {
             xmlns="http://www.w3.org/2000/svg" 
             fill="currentColor" 
             viewBox="0 0 24 24" 
-            className="w-6 h-6 transition-transform duration-300 hover:scale-110"
+            className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 hover:scale-110"
           >
             <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
           </svg>
@@ -97,7 +97,7 @@ function Hero() {
 
         {/* Resume Icon */}
         <div 
-          className={`absolute p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-700 ease-out shadow-lg ${
+          className={`absolute p-3 sm:p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-700 ease-out shadow-lg ${
             isPlaying ? "opacity-0 scale-75 translate-y-4 invisible pointer-events-none" : "opacity-100 scale-100 translate-y-0 visible"
           }`}
         >
@@ -105,7 +105,7 @@ function Hero() {
             xmlns="http://www.w3.org/2000/svg" 
             fill="currentColor" 
             viewBox="0 0 24 24" 
-            className="w-6 h-6 transition-transform duration-300 hover:scale-110"
+            className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 hover:scale-110"
           >
             <path d="M8 5v14l11-7z" />
           </svg>

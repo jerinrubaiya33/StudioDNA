@@ -22,10 +22,8 @@ export default function Choose() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   return (
-    /* Structural alignment resets keep Hero.jsx safely positioned above this section */
-    /* Drastically reduced overall vertical padding from py-24 to py-8 md:py-12 */
-    <section className="relative block clear-both w-full max-w-7xl mx-auto bg-[#465233] py-8 md:py-12 px-6 md:px-12 z-20 -mt-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+    <section className="relative block clear-both w-full max-w-auto mx-auto bg-[#4f5d39] py-8 md:py-12 px-6 md:px-12 z-20 -mt-20">
+      <div className="max-w-auto mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
         {/* Left Section: Approachable, Trust-Building Title */}
         <div className="md:col-span-1">
           {/* Removed mt-16 to eliminate huge unneeded space above header */}
@@ -45,8 +43,6 @@ export default function Choose() {
 
         {/* Right Section: Interactive Hover Pillars */}
         <div className="md:col-span-2 w-full">
-          {/* Desktop View: Side-by-side vertical columns that expand out horizontally on hover */}
-          {/* Reduced layout block height benchmark down to min-h-[220px] */}
           <div className="hidden md:flex w-full items-stretch min-h-[220px] border border-[#b7c5a1]/20 p-2 overflow-hidden">
             {features.map(({ num, title, desc }, i) => {
               const isHovered = hoveredIndex === i;
@@ -59,8 +55,6 @@ export default function Choose() {
                   style={{ flex: isHovered ? 5 : 1 }}
                 >
                   <div className="flex w-full min-w-[200px]">
-                    {/* Collapsed Pillar Strip View */}
-                    {/* Scaled inner vertical alignment spaces down to py-4 */}
                     <div className="flex flex-col items-center py-4 px-4 gap-4 w-16 min-w-[64px] select-none">
                       <span
                         className="text-xs font-mono text-[#ff7b00ad]"
@@ -127,7 +121,7 @@ export default function Choose() {
                     {num}
                   </span>
                   <h4
-                    style={{ fontFamily: "'Jost', sans-serif" }}
+                    style={{ fontFamily: "'serif'" }}
                     className="text-base tracking-wide text-white font-bold"
                   >
                     {title}

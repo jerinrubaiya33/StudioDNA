@@ -72,7 +72,7 @@ function HeaderNav() {
             </div>
             <span
               className="text-[9px] font-bold tracking-widest uppercase"
-              style={{ fontFamily: "'Jost', sans-serif" }}
+              style={{ fontFamily: "'serif', sans-serif" }}
             >
               Menu
             </span>
@@ -86,7 +86,7 @@ function HeaderNav() {
                 key={item}
                 href="#"
                 className="text-[16px] font-medium tracking-[0.2em] uppercase text-white hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all after:duration-300"
-                style={{ fontFamily: "'serif', sans-serif" }}
+                style={{ fontFamily: "'serif'" }}
               >
                 {item}
               </a>
@@ -97,7 +97,7 @@ function HeaderNav() {
             <button
               onClick={() => setIsMoreOpen(!isMoreOpen)}
               className="text-[10px] font-medium tracking-[0.2em] uppercase text-white hover:text-white/60 flex items-center gap-1 focus:outline-none"
-              style={{ fontFamily: "'Jost', sans-serif" }}
+              style={{ fontFamily: "'serif'" }}
             >
               More{" "}
               <span

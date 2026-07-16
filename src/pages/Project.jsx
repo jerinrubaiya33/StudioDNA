@@ -637,7 +637,6 @@
 
 // // ______________ Side by side ---------------
 
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Bashanta from "../assets/bashanta.png";
@@ -648,8 +647,6 @@ import InteriorLobby from "../assets/jb.png";
 import InteriorRestaurant from "../assets/sushi.png";
 import bashantaInte from "../assets/bashantaInte.png";
 import AKM from "../assets/akm.png";
-
-
 
 const allProjects = [
   {
@@ -712,7 +709,6 @@ const allProjects = [
     timeline: "Outline Architects, 2023",
     image: InteriorRestaurant,
   },
-
   {
     id: "int-resort-1",
     section: "interior",
@@ -794,24 +790,7 @@ function Project() {
   const exteriorProjects = getFiltered("exterior", exteriorFilter);
   const interiorProjects = getFiltered("interior", interiorFilter);
 
-  // const renderFilterNavbar = (currentFilter, setFilter) => (
-  //   <div className="flex z-10 flex-wrap items-center gap-6 text-[12px] tracking-wider font-sans my-6 text-neutral-500 mb-14 ">
-  //     {categories.map((cat) => (
-  //       <button
-  //         key={cat}
-  //         onClick={() => setFilter(cat)}
-  //         className={`transition-colors duration-300 ${
-  //           currentFilter === cat
-  //             ? "text-[#4f5d39] font-medium"
-  //             : "hover:text-[#4f5d39]"
-  //         }`}
-  //       >
-  //         {cat}
-  //       </button>
-  //     ))}
-  //   </div>
-  // );
-const renderFilterNavbar = (currentFilter, setFilter) => (
+  const renderFilterNavbar = (currentFilter, setFilter) => (
     <div className="flex z-10 flex-wrap items-center gap-6 text-[12px] tracking-wider font-sans mt-6 mb-2 pb-3 text-neutral-500 mb-12 border-b border-neutral-100">
       {categories.map((cat) => (
         <button
@@ -828,7 +807,7 @@ const renderFilterNavbar = (currentFilter, setFilter) => (
       ))}
     </div>
   );
-  // Added extraClass parameter here
+
   const renderSection = (title, projects, filter, setFilter, link, linkLabel, extraClass = "") => (
     <div className={`space-y-2 z-10 ${extraClass}`}>
       <h2 className="text-4xl md:text-5xl font-serif text-[#4f5d39] tracking-wide border-b border-neutral-200 pb-3 ">
@@ -864,7 +843,7 @@ const renderFilterNavbar = (currentFilter, setFilter) => (
   return (
     <section
       id="projects"
-      className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 py-12 bg-[#ffffff] space-y-16 "
+      className="relative z-10 w-full px-4 md:px-12 lg:px-20 py-12 bg-[#ffffff] space-y-16"
     >
       {renderSection(
         "Exterior Architecture",
@@ -889,13 +868,6 @@ const renderFilterNavbar = (currentFilter, setFilter) => (
 }
 
 export default Project;
-
-
-
-
-
-
-
 
 
 

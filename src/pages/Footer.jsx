@@ -1,393 +1,356 @@
-// import React from "react";
-// import { MapPin, Phone, ArrowUp } from "lucide-react";
-
-// // 1. Import your logo image from your assets folder (adjust filename/extension if needed)
-// import logo from "/src/assets/studioDNA_logo_green.png"; 
-// import logo2 from "/src/assets/outline.png";
-
-// // Colorful SocialIcon
-// const SocialIcon = ({ children, label, href, activeColor }) => (
-//   <a
-//     href={href}
-//     aria-label={label}
-//     target="_blank"
-//     rel="noopener noreferrer"
-//     style={{ "--brand-color": activeColor }}
-//     className="group flex h-10 w-11 items-center justify-center rounded-full border transition-all duration-300 [border-color:var(--brand-color)] [color:var(--brand-color)] hover:bg-[var(--brand-color)] hover:text-white hover:-translate-y-0.5"
-//   >
-//     {children}
-//   </a>
-// );
-
-// export default function Footer() {
-//   return (
-//     <footer
-//       className="relative z-10 w-full bg-[rgb(243,243,243)] text-[#4f5d39]"
-//       style={{ fontFamily: "'DM Sans', sans-serif" }}
-//     >
-//       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-16">
-        
-//         {/* Brand Row */}
-//         <div className="flex flex-col gap-8 border-b border-[#4f5d39]/10 pb-12 sm:flex-row sm:items-center sm:justify-between">
-//           <div className="flex items-center gap-4">
-            
-//             {/* 2. Replaced <Logomark /> with the <img> element */}
-//             <img 
-//               src={logo} 
-//               alt="STUDIO DNA Logo"
-//               className="h-22 -ml-7 w-auto shrink-0 object-contain" 
-//             />
-//             <p className="text-[#4f5d39] -ml-8">+</p>
-//              <img 
-//               src={logo2} 
-//               alt="STUDIO DNA Logo"
-//               className="h-20 -ml-4 mt-2 w-auto shrink-0 object-contain" 
-//             />
-
-//             <div>
-//               <div
-//                 className="text-2xl tracking-tight text-[#4f5d39]"
-//                 style={{ fontFamily: "'serif'" }}
-//               >
-//                 STUDIO DNA
-//               </div>
-//               <div
-//                 className="text-[11px] tracking-[0.25em] text-[#e97100] uppercase"
-//                 style={{ fontFamily: "'JetBrains Mono', monospace" }}
-//               >
-//                 A Subsidiary Studio
-//               </div>
-//                <div
-//                 className="text-2xl tracking-tight text-[#4f5d39]"
-//                 style={{ fontFamily: "'serif'" }}
-//               >
-//                 OUTLINE ARCHITECTS
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Real Colorful Social Icons */}
-//           <div className="flex items-center gap-3">
-//             <SocialIcon label="Facebook" href="#" activeColor="#1877F2">
-//               <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-//                 <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.86c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z" />
-//               </svg>
-//             </SocialIcon>
-//             <SocialIcon label="Instagram" href="#" activeColor="#E1306C">
-//               <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-//                 <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 014.45 2.53c.64-.25 1.37-.42 2.43-.47C7.94 2.01 8.28 2 11 2h1zm0 1.8h-.96c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.4-1.14.75-.35.35-.57.68-.75 1.14-.14.35-.3.88-.34 1.85-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.79.75 1.14.35.35.68.57 1.14.75.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.4 1.14-.75.35-.35.57-.68.75-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 00-.75-1.14 3.1 3.1 0 00-1.14-.75c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06zM12 6.86A5.14 5.14 0 1112 17.14 5.14 5.14 0 0112 6.86zm0 1.8a3.34 3.34 0 100 6.68 3.34 3.34 0 000-6.68zm5.34-2a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
-//               </svg>
-//             </SocialIcon>
-//             <SocialIcon label="Pinterest" href="#" activeColor="#BD081C">
-//               <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-//                 <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.64 7.85 6.35 9.3-.09-.79-.17-2 .03-2.86.19-.78 1.22-4.99 1.22-4.99s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.55 1.89 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.36-4.25-2.97 0-4.71 2.23-4.71 4.53 0 .9.34 1.86.78 2.38.09.1.1.19.07.3l-.29 1.16c-.05.19-.15.24-.35.14-1.3-.6-2.11-2.49-2.11-4.01 0-3.27 2.38-6.28 6.86-6.28 3.6 0 6.4 2.57 6.4 6 0 3.58-2.26 6.46-5.39 6.46-1.05 0-2.04-.55-2.38-1.19l-.65 2.47c-.23.9-.87 2.02-1.3 2.71.98.3 2.02.47 3.1.47 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
-//               </svg>
-//             </SocialIcon>
-//             <SocialIcon label="WhatsApp" href="#" activeColor="#25D366">
-//               <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-//                 <path d="M17.47 14.38c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.11-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.1-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.35-.26.28-1 .98-1 2.38 0 1.4 1.02 2.76 1.16 2.95.14.19 2 3.05 4.84 4.28.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.12-.26-.19-.54-.33zM12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.08-1.33A9.96 9.96 0 0012.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm0 18.06c-1.65 0-3.2-.46-4.52-1.25l-.32-.19-3.02.79.81-2.94-.21-.31A8.03 8.03 0 014 12c0-4.42 3.6-8.02 8.02-8.02 4.42 0 8.02 3.6 8.02 8.02 0 4.42-3.6 8.06-8.02 8.06z" />
-//               </svg>
-//             </SocialIcon>
-//           </div>
-//         </div>
-
-//         {/* Description */}
-//         <div className="border-b border-[#4f5d39]/10 py-12">
-//           <p
-//             className="max-w-3xl text-[15px] leading-[1.9] text-[#4f5d39]/80"
-//             style={{ fontFamily: "'DM Sans', sans-serif" }}
-//           >
-//             STUDIO DNA provides comprehensive services in architecture, planning &amp;
-//             engineering, interior &amp; landscape design for both public and private
-//             sector covering residential, commercial, institutional &amp; industrial
-//             projects as well as renovations and landmark restoration projects. We are
-//             focused to provide an efficient and complete design, build and supply
-//             service to our valuable clients.
-//           </p>
-//         </div>
-
-//         {/* Locations */}
-//         <div className="grid grid-cols-1 gap-12 py-12 sm:grid-cols-2">
-//           <div>
-//             <div
-//               className="mb-4 flex items-center gap-2 text-[11px] tracking-[0.25em] text-[#e97100]"
-//               style={{ fontFamily: "'JetBrains Mono', monospace" }}
-//             >
-//               <span>01</span>
-//               <span>—</span>
-//               <span>STUDIO DNA</span>
-//             </div>
-//             <div className="flex items-start gap-3 text-sm text-[#4f5d39]/85">
-//               <MapPin size={16} className="mt-0.5 shrink-0 text-[#e97100]" />
-//               <span>
-//                 House 42, Road 11, Baridhara,
-//                 <br />
-//                 Dhaka 1212, Bangladesh
-//               </span>
-//             </div>
-//             <div className="mt-3 flex items-center gap-3 text-sm text-[#4f5d39]">
-//               <Phone size={16} className="shrink-0 text-[#e97100]" />
-//               <a href="tel:+8801711000000" className="transition-colors hover:text-[#e97100]">
-//                 +880 1711-000 000
-//               </a>
-//             </div>
-//           </div>
-
-//           <div>
-//             <div
-//               className="mb-4 flex items-center gap-2 text-[11px] tracking-[0.25em] text-[#e97100]"
-//               style={{ fontFamily: "'JetBrains Mono', monospace" }}
-//             >
-//               <span>02</span>
-//               <span>—</span>
-//               <span>OUTLINE ARCHITECTS</span>
-//             </div>
-//             <div className="flex items-start gap-3 text-sm text-[#4f5d39]">
-//               <MapPin size={16} className="mt-0.5 shrink-0 text-[#e97100]" />
-//               <span>
-//                 Level 6, Chartered Tower, GEC Circle,
-//                 <br />
-//                 Chattogram 4000, Bangladesh
-//               </span>
-//             </div>
-//             <div className="mt-3 flex items-center gap-3 text-sm text-[#4f5d39]">
-//               <Phone size={16} className="shrink-0 text-[#e97100]" />
-//               <a href="tel:+8801811000000" className="transition-colors hover:text-[#e97100]">
-//                 +880 1811-000 000
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Relationship Note + Back to Top */}
-//         <div className="flex flex-col items-start justify-between gap-6 pt-8 sm:flex-row sm:items-center">
-//           <p
-//             className="max-w-xl text-xs leading-relaxed text-[#4f5d39]"
-//             style={{ fontFamily: "'JetBrains Mono', monospace" }}
-//           >
-//             STUDIO DNA IS A DESIGN BRANCH OF OUTLINE ARCHITECTS, EXTENDING 30 YEARS OF
-//             PRACTICE INTO FOCUSED RESIDENTIAL &amp; BOUTIQUE WORK. © {new Date().getFullYear()}{" "}
-//             ALL RIGHTS RESERVED.
-//           </p>
-//           <button
-//             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-//             className="group flex items-center gap-2 text-[11px] tracking-[0.2em] text-[#4f5d39] transition-colors hover:text-[#e97100]"
-//             style={{ fontFamily: "'JetBrains Mono', monospace" }}
-//           >
-//             BACK TO TOP
-//             <ArrowUp size={14} className="transition-transform group-hover:-translate-y-1" />
-//           </button>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { MapPin, Phone, Mail, ArrowUp } from "lucide-react";
-
-// 1. Import your logo image from your assets folder (adjust filename/extension if needed)
-import logo from "/src/assets/studioDNA_logo_green.png"; 
+import officeImage from "../assets/akm.png";
+import office2Image from "../assets/sushi.png";
+import logo from "/src/assets/studioDNA_logo_green.png";
 import logo2 from "/src/assets/outline.png";
 
-// Colorful SocialIcon
+// Colorful social icon button
 const SocialIcon = ({ children, label, href, activeColor }) => (
   <a
     href={href}
     aria-label={label}
     target="_blank"
     rel="noopener noreferrer"
-    style={{ "--brand-color": activeColor }}
-    className="group flex h-10 w-11 items-center justify-center rounded-full border transition-all duration-300 [border-color:var(--brand-color)] [color:var(--brand-color)] hover:bg-[var(--brand-color)] hover:text-white hover:-translate-y-0.5"
+    className="group relative flex h-9 w-9 items-center justify-center rounded-full border border-[#4f5d39]/25 text-[#4f5d39] transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:text-white"
   >
-    {children}
+    <span
+      className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      style={{ backgroundColor: activeColor }}
+    />
+    <span className="relative z-10 flex items-center justify-center">{children}</span>
   </a>
 );
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer
-      className="relative z-10 w-full bg-[rgb(243,243,243)] text-[#4f5d39]"
-      style={{ fontFamily: "'DM Sans', sans-serif" }}
+      className="relative z-10 overflow-hidden border-t border-[#4f5d39]/15 bg-[#f5f2ea] text-[#2c3524]"
+      style={{ fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif" }}
     >
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 lg:px-16">
-        
-        {/* Brand Row */}
-        <div className="flex flex-col gap-8 border-b border-[#4f5d39]/10 pb-12 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
-            
-            {/* 2. Replaced <Logomark /> with the <img> element */}
-            <img 
-              src={logo} 
-              alt="STUDIO DNA Logo"
-              className="h-22 -ml-7 w-auto shrink-0 object-contain" 
-            />
-            <p className="text-[#4f5d39] -ml-8">+</p>
-             <img 
-              src={logo2} 
-              alt="STUDIO DNA Logo"
-              className="h-20 -ml-4 mt-2 w-auto shrink-0 object-contain" 
-            />
+      {/* Decorative top rule */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#4f5d39]/40 to-transparent" />
 
-            <div>
-              <div
-                className="text-2xl tracking-tight text-[#4f5d39]"
-                style={{ fontFamily: "'serif'" }}
-              >
-                STUDIO DNA
+      <div className="mx-auto max-w-7xl px-6 pt-12 pb-10 sm:px-8 sm:pt-16 lg:px-12 lg:pt-20">
+        {/* ---------- Brand Row ---------- */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
+          <div className="md:col-span-7">
+            {/* Flex container that wraps nicely on mobile, maintaining proper alignment */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 md:flex-nowrap">
+              
+              <img
+                src={logo}
+                alt="STUDIO DNA Logo"
+                className="h-16 w-auto shrink-0 object-contain max-sm:-ml-7 sm:h-18 md:h-22 md:-ml-7"
+              />
+              <p className="text-[#4f5d39] text-lg md:-ml-8 -ml-4">+</p>
+              <img
+                src={logo2}
+                alt="Outline Architects Logo"
+                className="h-16 w-auto shrink-0 object-contain sm:h-16 md:h-20 -ml-1 md:-ml-4 md:mt-2"
+              />
+
+              <div className="w-full mt-4 sm:w-auto sm:mt-0">
+                <div
+                  className="text-xl tracking-tight text-[#4f5d39] sm:text-2xl"
+                  style={{ fontFamily: "'serif'" }}
+                >
+                  STUDIO DNA
+                </div>
+                <div
+                  className="text-[10px] tracking-[0.2em] text-[#e97100] uppercase sm:text-[11px] sm:tracking-[0.25em]"
+                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  A Subsidiary Studio
+                </div>
+                <div
+                  className="text-xl tracking-tight text-[#4f5d39] sm:text-2xl"
+                  style={{ fontFamily: "'serif'" }}
+                >
+                  OUTLINE ARCHITECTS
+                </div>
               </div>
-              <div
-                className="text-[11px] tracking-[0.25em] text-[#e97100] uppercase"
+            </div>
+
+            <p className="mt-6 text-[14px] leading-relaxed text-[#2c3524]/80 sm:mt-8 sm:text-[15px] max-w-2xl">
+              STUDIO DNA provides comprehensive services in architecture, planning &
+              engineering, interior & landscape design for both public and private
+              sectors — covering residential, commercial, institutional & industrial
+              projects, renovations, and landmark restorations. We deliver
+              efficient, end-to-end design, build and supply services to our
+              valued clients.
+            </p>
+          </div>
+
+          {/* Social + newsletter */}
+          <div className="md:col-span-5 md:pl-6">
+            <p
+              className="text-[11px] tracking-[0.3em] text-[#4f5d39]"
+              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            >
+              — FOLLOW THE STUDIO
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <SocialIcon label="Instagram" href="#" activeColor="#E1306C">
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01" />
+                </svg>
+              </SocialIcon>
+
+              <SocialIcon label="Facebook" href="#" activeColor="#1877F2">
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </SocialIcon>
+
+              <SocialIcon label="LinkedIn" href="#" activeColor="#4d97e1">
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </SocialIcon>
+
+              <SocialIcon label="YouTube" href="#" activeColor="#FF0000">
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+                </svg>
+              </SocialIcon>
+
+              <SocialIcon label="Pinterest" href="#" activeColor="#BD081C">
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 0 5.397 0 12.017c0 5.077 3.158 9.413 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.748-1.379l-.749 2.848c-.27 1.039-1.001 2.344-1.488 3.137C10.456 23.9 11.224 24 12.017 24 18.639 24 24 18.639 24 12.017 24 5.397 18.639 0 12.017 0z" />
+                </svg>
+              </SocialIcon>
+            </div>
+
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="mt-8 flex items-center border-b border-[#4f5d39]/40 pb-2 focus-within:border-[#e97100]"
+            >
+              <input
+                type="email"
+                required
+                placeholder="your@email.com"
+                className="w-full bg-transparent text-sm text-[#2c3524] placeholder:text-[#4f5d39]/60 focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="ml-3 text-[11px] tracking-[0.25em] text-[#4f5d39] transition-colors hover:text-[#e97100]"
                 style={{ fontFamily: "'JetBrains Mono', monospace" }}
               >
-                A Subsidiary Studio
+                SUBSCRIBE →
+              </button>
+            </form>
+            <p className="mt-2 text-[11px] text-[#4f5d39]/70">
+              Occasional dispatches on projects, journals & studio news.
+            </p>
+          </div>
+        </div>
+
+        {/* ---------- Locations ---------- */}
+        <div className="mt-12 grid grid-cols-1 gap-12 sm:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-16">
+          {/* ================= 01 STUDIO DNA ================= */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {/* Details */}
+            <div>
+              <div className="flex items-baseline gap-3">
+                <span
+                  className="text-xs tracking-[0.3em] text-[#4f5d39]"
+                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  01
+                </span>
+                <span className="h-px w-8 bg-[#4f5d39]" />
+                <h3
+                  className="text-sm font-semibold tracking-[0.25em] text-[#4f5d39]"
+                  style={{ fontFamily: "'serif'" }}
+                >
+                  STUDIO DNA
+                </h3>
               </div>
-               <div
-                className="text-2xl tracking-tight text-[#4f5d39]"
-                style={{ fontFamily: "'serif'" }}
-              >
-                OUTLINE ARCHITECTS
+
+              <ul className="mt-6 space-y-4 text-sm text-[#2c3524]/85">
+                <li className="flex gap-3">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-[#4f5d39]" />
+                  <span className="leading-relaxed">
+                    House 42, Road 11, Baridhara,
+                    <br />
+                    Dhaka 1212, Bangladesh
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone size={16} className="shrink-0 text-[#4f5d39]" />
+                  <a href="tel:+8801711000000" className="transition-colors hover:text-[#e97100]">
+                    +880 1711-000 000
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail size={16} className="shrink-0 text-[#4f5d39]" />
+                  <a
+                    href="mailto:info@studiodna.com"
+                    className="transition-colors hover:text-[#e97100]"
+                  >
+                    info@studiodna.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Media (Image + Map) */}
+            <div className="flex flex-col gap-4">
+              <div className="group relative overflow-hidden rounded-sm shadow-[0_10px_40px_-20px_rgba(44,53,36,0.5)]">
+                <img
+                  src={officeImage}
+                  alt="Inside the Studio DNA office — architects at work"
+                  loading="lazy"
+                  className="h-[140px] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2c3524]/60 via-transparent to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-3">
+                  <p
+                    className="text-[9px] tracking-[0.2em] text-white/90"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    — THE STUDIO / BARIDHARA
+                  </p>
+                  <p
+                    className="text-[9px] tracking-[0.2em] text-white/70"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    EST. 1994
+                  </p>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-sm border border-[#4f5d39]/20">
+                <iframe
+                  title="Studio DNA location map"
+                  src="https://www.google.com/maps?q=Baridhara+Dhaka+Bangladesh&output=embed"
+                  width="100%"
+                  height="140"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="block h-[140px] w-full grayscale-[15%] transition-all duration-500 hover:grayscale-0"
+                  style={{ border: 0 }}
+                />
               </div>
             </div>
           </div>
 
-          {/* Real Colorful Social Icons */}
-          <div className="flex items-center gap-3">
-            <SocialIcon label="Facebook" href="#" activeColor="#1877F2">
-              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.86c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z" />
-              </svg>
-            </SocialIcon>
-            <SocialIcon label="Instagram" href="#" activeColor="#E1306C">
-              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                <path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 014.45 2.53c.64-.25 1.37-.42 2.43-.47C7.94 2.01 8.28 2 11 2h1zm0 1.8h-.96c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.4-1.14.75-.35.35-.57.68-.75 1.14-.14.35-.3.88-.34 1.85-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.79.75 1.14.35.35.68.57 1.14.75.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.4 1.14-.75.35-.35.57-.68.75-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 00-.75-1.14 3.1 3.1 0 00-1.14-.75c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06zM12 6.86A5.14 5.14 0 1112 17.14 5.14 5.14 0 0112 6.86zm0 1.8a3.34 3.34 0 100 6.68 3.34 3.34 0 000-6.68zm5.34-2a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
-              </svg>
-            </SocialIcon>
-            <SocialIcon label="Pinterest" href="#" activeColor="#BD081C">
-              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.64 7.85 6.35 9.3-.09-.79-.17-2 .03-2.86.19-.78 1.22-4.99 1.22-4.99s-.31-.63-.31-1.55c0-1.45.84-2.54 1.89-2.54.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.89 1.55 1.89 1.86 0 3.29-1.96 3.29-4.79 0-2.5-1.8-4.25-4.36-4.25-2.97 0-4.71 2.23-4.71 4.53 0 .9.34 1.86.78 2.38.09.1.1.19.07.3l-.29 1.16c-.05.19-.15.24-.35.14-1.3-.6-2.11-2.49-2.11-4.01 0-3.27 2.38-6.28 6.86-6.28 3.6 0 6.4 2.57 6.4 6 0 3.58-2.26 6.46-5.39 6.46-1.05 0-2.04-.55-2.38-1.19l-.65 2.47c-.23.9-.87 2.02-1.3 2.71.98.3 2.02.47 3.1.47 5.52 0 10-4.48 10-10S17.52 2 12 2z" />
-              </svg>
-            </SocialIcon>
-            <SocialIcon label="WhatsApp" href="#" activeColor="#25D366">
-              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                <path d="M17.47 14.38c-.28-.14-1.67-.82-1.93-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.11-.16.19-.33.21-.61.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.1-.19.05-.35-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.35-.26.28-1 .98-1 2.38 0 1.4 1.02 2.76 1.16 2.95.14.19 2 3.05 4.84 4.28.68.29 1.21.47 1.62.6.68.22 1.3.19 1.79.11.55-.08 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.12-.26-.19-.54-.33zM12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.08-1.33A9.96 9.96 0 0012.02 22C17.53 22 22 17.52 22 12S17.53 2 12.02 2zm0 18.06c-1.65 0-3.2-.46-4.52-1.25l-.32-.19-3.02.79.81-2.94-.21-.31A8.03 8.03 0 014 12c0-4.42 3.6-8.02 8.02-8.02 4.42 0 8.02 3.6 8.02 8.02 0 4.42 3.6 8.06-8.02 8.06z" />
-              </svg>
-            </SocialIcon>
+          {/* ================= 02 OUTLINE ARCHITECTS ================= */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {/* Details */}
+            <div>
+              <div className="flex items-baseline gap-3">
+                <span
+                  className="text-xs tracking-[0.3em] text-[#4f5d39]"
+                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  02
+                </span>
+                <span className="h-px w-8 bg-[#4f5d39]/40" />
+                <h3
+                  className="text-sm font-semibold tracking-[0.25em] text-[#4f5d39]"
+                  style={{ fontFamily: "'serif'" }}
+                >
+                  OUTLINE ARCHITECTS
+                </h3>
+              </div>
+
+              <ul className="mt-6 space-y-4 text-sm text-[#2c3524]/85">
+                <li className="flex gap-3">
+                  <MapPin size={16} className="mt-0.5 shrink-0 text-[#4f5d39]" />
+                  <span className="leading-relaxed">
+                    Level 6, Chartered Tower, GEC Circle,
+                    <br />
+                    Chattogram 4000, Bangladesh
+                  </span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone size={16} className="shrink-0 text-[#4f5d39]" />
+                  <a href="tel:+8801811000000" className="transition-colors hover:text-[#e97100]">
+                    +880 1811-000 000
+                  </a>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail size={16} className="shrink-0 text-[#4f5d39]" />
+                  <a
+                    href="mailto:contact@outlinearchitects.com"
+                    className="transition-colors hover:text-[#e97100]"
+                  >
+                    contact@outlinearchitects.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Media (Image + Map) */}
+            <div className="flex flex-col gap-4">
+              <div className="group relative overflow-hidden rounded-sm shadow-[0_10px_40px_-20px_rgba(44,53,36,0.5)]">
+                <img
+                  src={office2Image}
+                  alt="Inside the Outline Architects office"
+                  loading="lazy"
+                  className="h-[140px] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2c3524]/60 via-transparent to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-3">
+                  <p
+                    className="text-[9px] tracking-[0.2em] text-white/90"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    — HQ / CHATTOGRAM
+                  </p>
+                  <p
+                    className="text-[9px] tracking-[0.2em] text-white/70"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    EST. 2010
+                  </p>
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-sm border border-[#4f5d39]/20">
+                <iframe
+                  title="Outline Architects location map"
+                  src="https://www.google.com/maps?q=GEC+Circle+Chattogram+Bangladesh&output=embed"
+                  width="100%"
+                  height="140"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="block h-[140px] w-full grayscale-[15%] transition-all duration-500 hover:grayscale-0"
+                  style={{ border: 0 }}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Description - Centered Middle of Page */}
-        <div className="border-b border-[#4f5d39]/10 py-12">
+        {/* ---------- Bottom bar ---------- */}
+        <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[#4f5d39]/20 pt-6 sm:mt-16 sm:flex-row sm:items-center">
           <p
-            className="mx-auto max-w-6xl mr-10 text-left  text-[15px] leading-[1.9] text-[#4f5d39]"
-            style={{ fontFamily: "'serif', sans-serif" }}
-          >
-            STUDIO DNA provides comprehensive services in architecture, planning &amp;
-            engineering, interior &amp; landscape design for both public and private
-            sector covering residential, commercial, institutional &amp; industrial
-            projects as well as renovations and landmark restoration projects. We are
-            focused to provide an efficient and complete design, build and supply
-            service to our valuable clients.
-          </p>
-        </div>
-
-        {/* Locations */}
-        <div className="grid grid-cols-1 gap-12 py-12 sm:grid-cols-2">
-          <div>
-            <div
-              className="mb-4 flex items-center gap-2 text-[11px] tracking-[0.25em] text-[#e97100]"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
-            >
-              <span>01</span>
-              <span>—</span>
-              <span>STUDIO DNA</span>
-            </div>
-            <div className="flex items-start gap-3 text-sm text-[#4f5d39]/85">
-              <MapPin size={16} className="mt-0.5 shrink-0 text-[#e97100]" />
-              <span>
-                House 42, Road 11, Baridhara,
-                <br />
-                Dhaka 1212, Bangladesh
-              </span>
-            </div>
-            <div className="mt-3 flex items-center gap-3 text-sm text-[#4f5d39]">
-              <Phone size={16} className="shrink-0 text-[#e97100]" />
-              <a href="tel:+8801711000000" className="transition-colors hover:text-[#e97100]">
-                +880 1711-000 000
-              </a>
-            </div>
-            {/* Studio DNA Email with Horizontal Alignment Fix */}
-            <div className="mt-2 flex items-center gap-3 text-sm text-[#4f5d39]">
-              <Mail size={16} className="shrink-0 text-[#e97100]" />
-              <a href="mailto:info@studiodna.com" className="transition-colors hover:text-[#e97100]">
-                info@studiodna.com
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <div
-              className="mb-4 flex items-center gap-2 text-[11px] tracking-[0.25em] text-[#e97100]"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
-            >
-              <span>02</span>
-              <span>—</span>
-              <span>OUTLINE ARCHITECTS</span>
-            </div>
-            <div className="flex items-start gap-3 text-sm text-[#4f5d39]">
-              <MapPin size={16} className="mt-0.5 shrink-0 text-[#e97100]" />
-              <span>
-                Level 6, Chartered Tower, GEC Circle,
-                <br />
-                Chattogram 4000, Bangladesh
-              </span>
-            </div>
-            <div className="mt-3 flex items-center gap-3 text-sm text-[#4f5d39]">
-              <Phone size={16} className="shrink-0 text-[#e97100]" />
-              <a href="tel:+8801811000000" className="transition-colors hover:text-[#e97100]">
-                +880 1811-000 000
-              </a>
-            </div>
-            {/* Outline Architects Email with Horizontal Alignment Fix */}
-            <div className="mt-2 flex items-center gap-3 text-sm text-[#4f5d39]">
-              <Mail size={16} className="shrink-0 text-[#e97100]" />
-              <a href="mailto:contact@outlinearchitects.com" className="transition-colors hover:text-[#e97100]">
-                contact@outlinearchitects.com
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Relationship Note + Back to Top */}
-        <div className="flex flex-col items-start justify-between gap-6 pt-8 sm:flex-row sm:items-center">
-          <p
-            className="max-w-xl text-xs leading-relaxed text-[#4f5d39]"
+            className="max-w-2xl text-[10px] leading-relaxed tracking-[0.15em] text-[#4f5d39] sm:text-[11px] sm:tracking-[0.2em]"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
-            STUDIO DNA IS A DESIGN BRANCH OF OUTLINE ARCHITECTS, EXTENDING 30 YEARS OF
-            PRACTICE INTO FOCUSED RESIDENTIAL &amp; BOUTIQUE WORK. © {new Date().getFullYear()}{" "}
-            ALL RIGHTS RESERVED.
+            STUDIO DNA IS A DESIGN BRANCH OF OUTLINE ARCHITECTS, EXTENDING 30 YEARS
+            OF PRACTICE INTO FOCUSED RESIDENTIAL & BOUTIQUE WORK.
+            <br />© {year} ALL RIGHTS RESERVED.
           </p>
+
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group flex items-center gap-2 text-[11px] tracking-[0.2em] text-[#4f5d39] transition-colors hover:text-[#e97100]"
+            className="group flex items-center gap-2 text-[11px] tracking-[0.25em] text-[#4f5d39] transition-colors hover:text-[#e97100] self-end sm:self-auto"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             BACK TO TOP
-            <ArrowUp size={14} className="transition-transform group-hover:-translate-y-1" />
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#4f5d39]/40 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#e97100]">
+              <ArrowUp size={14} />
+            </span>
           </button>
         </div>
       </div>
