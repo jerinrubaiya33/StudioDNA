@@ -38,7 +38,7 @@ function Hero() {
       onClick={handleVideoToggle}
       className={`relative z-30 flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-75 sm:pt-24 text-center cursor-pointer transition-colors duration-700 ease-out shadow-[0_-20px_50px_rgba(0,0,0,0.3)] 
         w-full aspect-video md:h-auto md:min-h-screen 
-        -mt-20 sm:-mt-28 md:-mt-42 
+        -mt-20 sm:-mt-28 md:-mt-34 
         ${isPlaying ? "bg-[#3c472b]" : "bg-[#2a2c2a]"}`}
     >
       {/* Top Progress Bar */}

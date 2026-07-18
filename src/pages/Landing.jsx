@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import remodelingImg from '../assets/remodeling.jpeg'; 
 
 const Landing = () => {
   // Track which service row is active/expanded for mobile viewports
@@ -7,27 +8,34 @@ const Landing = () => {
   const scrollTimeoutRef = useRef(null);
 
   const services = [
-    {
+   {
       number: "01",
       title: "Exterior Design",
-      description: "Crafting striking facades and harmonious outdoor spaces that redefine modern architecture.",
+      description: "Designing beautiful home exteriors and outdoor spaces that look stunning from the street and blend perfectly with their surroundings.",
       targetId: "exterior",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
     },
     {
       number: "02",
       title: "Interior Design",
-      description: "Bespoke internal layouts focusing on spatial fluidness, luxury finishes, and functional elegance.",
+      description: "Creating warm, thoughtful indoor spaces tailored to your daily life, focusing on natural light, smart layouts, and beautiful finishes.",
       targetId: "interior",
       image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
     },
     {
       number: "03",
       title: "Renovation",
-      description: "Breathing new life into historic or outdated structures with sensitive, high-end modernization.",
-      targetId: null, // Static item for show
+      description: "Breathing new life into older or historic properties, updating them for modern living while protecting the character that makes them special.",
+      targetId: null, 
       image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=80"
     },
+    {
+      number: "04",
+      title: "Remodeling",
+      description: "Changing the actual layout of your current home—like knocking down walls or reshaping rooms—to completely transform how you use the space.",
+      targetId: null, 
+      image: remodelingImg 
+    }
   ];
 
   const handleServiceClick = (e, targetId, index) => {
@@ -119,7 +127,7 @@ const Landing = () => {
                 {/* Right Column: Clean description alignment */}
                 <div className="pl-4 sm:pl-6 md:pl-0 pr-24 sm:pr-32 md:pr-30 flex-1 md:flex md:justify-end">
                   <div className="w-full md:max-w-md">
-                    <p className="text-[11px] sm:text-xs md:text-sm text-[#4f5d39] font-light leading-relaxed opacity-85 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-[11px] sm:text-xs md:text-sm text-[#313826] font-light leading-relaxed opacity-85 group-hover:opacity-100 transition-opacity duration-300">
                       {service.description}
                     </p>
                   </div>

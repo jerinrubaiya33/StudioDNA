@@ -161,6 +161,7 @@ function People() {
                       key={person.id}
                       onClick={() => setSelected(person)}
                       className={`
+                        group
                         relative
                         aspect-[3/4]
                         w-full
@@ -193,6 +194,13 @@ function People() {
                           hover:grayscale-0 hover:brightness-100 hover:contrast-100
                         `}
                       />
+
+                      {/* HOVER CIRCLE ANIMATION WITH TEXT */}
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 pb-[40%]">
+                        <div className="w-14 h-14 rounded-full bg-[#4f5d39]/90 text-white flex items-center justify-center font-serif text-[10px] uppercase tracking-wider font-semibold shadow-md scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ease-out mt-34 ml-10">
+                          Click Me
+                        </div>
+                      </div>
                       
                       {/* NAME AND ROLE OVERLAY */}
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-2 text-left flex flex-col justify-end min-h-[40%] transition-opacity duration-300">
