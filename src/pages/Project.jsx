@@ -625,7 +625,7 @@
 
 
 
-//  ______________ Side by side ---------------
+//  ______________ Side by side ______________
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -700,7 +700,7 @@ const allProjects = [
     image: InteriorRestaurant,
   },
   {
-    id: "int-resort-1",
+    id: "int-resort-2",
     section: "interior",
     category: "Resort",
     title: "BASHANTA BILASH",
@@ -710,7 +710,7 @@ const allProjects = [
     image: bashantaInte,
   },
   {
-    id: "int-rest-1",
+    id: "int-rest-2",
     section: "interior",
     category: "Restaurant",
     title: "AKM RESTAURANT & CONVENTION CENTER",
@@ -725,10 +725,13 @@ const categories = ["All", "Hospital", "Resort", "Restaurant", "Villa"];
 
 function ProjectCard({ project }) {
   return (
-    <div className="bg-[#e7e7e7] z-10 text-[#4f5d39] p-3 md:p-4 flex flex-col select-none shadow-sm transition-transform duration-500 hover:-translate-y-1">
+    <Link
+      to={`/projects/${project.id}`}
+      className="block bg-[#e7e7e7] z-10 text-[#4f5d39] p-3 md:p-4 flex flex-col select-none shadow-sm transition-transform duration-500 hover:-translate-y-1 cursor-pointer"
+    >
       {/* Title overlaps the top of the image */}
       <div className="text-center relative z-20 pointer-events-none">
-        <h3 className="text-2xl md:text-4xl -mb-3.5 md:-mb-3.5 font-serif tracking-wide font-semibold text-[#4f5d39] drop-shadow-md">
+        <h3 className="text-xl md:text-3xl mb-1 md:mb-2 font-serif tracking-wide font-semibold text-[#4f5d39] drop-shadow-md">
           {project.title}
         </h3>
       </div>
@@ -744,27 +747,29 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Technical specs */}
-      <div className="grid grid-cols-3 gap-2 border-t border-white/20 mt-3 pt-3 text-[10px] md:text-[11px] tracking-wide font-sans text-[#4f5d39] ">
+      <div className="grid grid-cols-3 gap-2 border-t border-white/20 mt-3 pt-3 text-[10px] md:text-[11px] tracking-wide font-sans text-[#4f5d39]">
         <div className="flex flex-col space-y-0.5">
           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
             Location
           </span>
-          <span className="font-normal leading-snug text-[#4f5d39]">{project.location}</span>
+          <span className="font-bold leading-snug text-[#4f5d39]">
+            {project.location}
+          </span>
         </div>
         <div className="flex flex-col space-y-0.5 border-l border-white/20 pl-3">
           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
             Scale
           </span>
-          <span className="font-normal">{project.area}</span>
+          <span className="font-bold">{project.area}</span>
         </div>
         <div className="flex flex-col space-y-0.5 border-l border-white/20 pl-3">
           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
             Credits
           </span>
-          <span className="font-normal leading-snug">{project.timeline}</span>
+          <span className="font-bold leading-snug">{project.timeline}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -774,7 +779,8 @@ function Project() {
 
   const getFiltered = (section, filter) =>
     allProjects.filter(
-      (p) => p.section === section && (filter === "All" || p.category === filter),
+      (p) =>
+        p.section === section && (filter === "All" || p.category === filter),
     );
 
   const exteriorProjects = getFiltered("exterior", exteriorFilter);
@@ -798,7 +804,15 @@ function Project() {
     </div>
   );
 
-  const renderSection = (title, projects, filter, setFilter, link, linkLabel, extraClass = "") => (
+  const renderSection = (
+    title,
+    projects,
+    filter,
+    setFilter,
+    link,
+    linkLabel,
+    extraClass = "",
+  ) => (
     <div className={`space-y-2 z-10 ${extraClass}`}>
       <h2 className="text-4xl md:text-5xl font-serif text-[#4f5d39] tracking-wide border-b border-neutral-200 pb-3 ">
         {title}
@@ -819,12 +833,14 @@ function Project() {
         </div>
       )}
 
-      <div className="pt-4 flex justify-end">
+      {/* Enlarged "Explore more" link */}
+      <div className="pt-6 flex justify-end">
         <Link
           to={link}
-          className="inline-flex items-center gap-2 text-xs font-serif text-neutral-500 hover:text-[#4f5d39] transition-colors"
+          className="inline-flex items-center gap-2 text-base md:text-md font-serif font-medium text-neutral-600 hover:text-[#4f5d39] transition-all hover:translate-x-1"
         >
-          {linkLabel} <span className="text-sm">&rarr;</span>
+          {linkLabel}{" "}
+          <span className="text-xl md:text-2xl leading-none">&rarr;</span>
         </Link>
       </div>
     </div>
@@ -835,14 +851,18 @@ function Project() {
       id="projects"
       className="relative z-10 w-full px-4 md:px-12 lg:px-20 py-12 bg-[#ffffff] space-y-16"
     >
+      {/* Top Title */}
+      <h1 className="text-2xl md:text-4xl mt-10 sm:mb-15 mb-6 font-serif font-normal text-[#4f5d39] tracking-tight border-b-1 border-[#e7eedb] pb-4 text-center">
+        SOME OF OUR PROJECTS
+      </h1>
+
       {renderSection(
         "Exterior Architecture",
         exteriorProjects,
         exteriorFilter,
         setExteriorFilter,
-        "/exterior-portfolio",
+        "/projects",
         "Explore more exterior projects",
-        "mt-14"
       )}
 
       {renderSection(
@@ -850,7 +870,7 @@ function Project() {
         interiorProjects,
         interiorFilter,
         setInteriorFilter,
-        "/interior-portfolio",
+        "/projects",
         "Explore more interior projects",
       )}
     </section>

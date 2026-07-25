@@ -404,10 +404,10 @@ export default function Footer() {
       </div>
 
       {/*  GREEN DISPLAY SECTION  */}
-      <div className="w-full px-4 py-6 md:py-10 sm:-mb-10 -mb-5 -mt-10 sm:-mt-0 select-none overflow-hidden">
+      <div className="w-full px-4 py-6 md:py-10 sm:-mb-10 -mb-2 -mt-10 sm:-mt-0 select-none overflow-hidden">
         <div className="mx-auto max-w-7xl">
           <h1
-            className="text-[7.5vw] sm:text-[5.8vw] md:text-[5.2vw] lg:text-[7vw] font-bold tracking-tighter leading-none text-[#4f5d39] text-center uppercase whitespace-nowrap text-ellipsis"
+            className="text-[6vw] sm:text-[5.8vw] md:text-[5.2vw] lg:text-[4vw] font-light tracking-tighter leading-none text-[#4f5d39] text-center uppercase whitespace-nowrap text-ellipsis"
             style={{ fontFamily: "'serif'" }}
           >
             Let's Build Together.
