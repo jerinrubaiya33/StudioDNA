@@ -345,7 +345,7 @@ const Meet = () => {
   const otpDigits = Array.from({ length: 6 }, (_, i) => verificationInput[i] || "");
 
   return (
-    <section className="relative z-10 -mt-7 mb-20 w-full px-4 sm:px-6 md:px-12 lg:px-16 py-10 md:py-20 bg-[#f5f2ea] rounded-3xl md:rounded-4xl text-neutral-800 space-y-12 md:space-y-24">
+    <section id="meet" className="relative z-10 -mt-7 mb-20 w-full px-4 sm:px-6 md:px-12 lg:px-16 py-10 md:py-20 bg-[#f5f2ea] rounded-3xl md:rounded-4xl text-neutral-800 space-y-12 md:space-y-24">
       {/* 1. Meet Our Architects Grid */}
       <div className="space-y-6">
         <div className="text-center md:text-left">

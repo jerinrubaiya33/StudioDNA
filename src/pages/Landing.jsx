@@ -93,13 +93,18 @@ const Landing = () => {
               className="group text-left relative w-full border-b border-zinc-200 overflow-hidden block transition-colors duration-500 bg-white cursor-pointer touch-manipulation"
             >
               
-              <div 
-                className={`absolute top-0 bottom-0 right-0 z-0 bg-cover bg-center transition-[width,opacity,filter] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none 
-                  md:w-32 md:grayscale-70 md:opacity-140 md:group-hover:w-full md:group-hover:opacity-15 md:group-hover:grayscale-0
-                  ${isMobileExpanded ? 'w-full opacity-15 grayscale-0' : 'w-20 opacity-0 grayscale'}
-                `}
-                style={{ backgroundImage: `url(${service.image})` }}
-              />
+             <div 
+  className={`absolute top-0 bottom-0 right-0 z-0 bg-cover bg-center transition-[width,opacity,filter] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none 
+    ${/* Desktop styles */ ''}
+    md:w-32 md:grayscale-[70%] md:opacity-40 md:group-hover:w-full md:group-hover:opacity-15 md:group-hover:grayscale-0
+    ${/* Mobile styles */ ''}
+    ${isMobileExpanded 
+      ? 'w-full opacity-20 grayscale-0' 
+      : 'w-24 opacity-40 grayscale-[50%]'
+    }
+  `}
+  style={{ backgroundImage: `url(${service.image})` }}
+/>
               
               {/* Crop Boundary Indicator Line */}
               <div 

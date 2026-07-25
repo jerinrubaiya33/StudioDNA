@@ -18,7 +18,7 @@ const About = () => {
           </span>
           
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-[30px] font-normal leading-[1.25] md:leading-[1.15] tracking-normal max-w-[640px] text-left md:text-justify subpixel-antialiased text-[#4f5d39]">
-            <span className="font-semibold text-[#e66f00]">Studio DNA</span> is an architectural practice where every project is shaped through proportion, light, texture, and spatial balance. we help you uncover exactly how you want to live and what your space needs to become. We don't just hand over blueprints—our dedicated team works continuously by your side, guiding your project from the very first spark of an idea all the way through the final build.    
+            <span className="font-semibold text-[#e66f00]">Studio DNA</span> is an architectural firm, founded in 2026. Where every project is shaped through proportion, light, texture, and spatial balance. We help you uncover exactly how you want to live and what your space needs to become. We don't just hand over blueprints—our dedicated team works continuously by your side, guiding your project from the very first spark of an idea all the way through the final build.    
           </h2>
         </div>
 
@@ -36,7 +36,7 @@ const About = () => {
       </div>
 
       {/* Middle Section: Side-by-Side Images (Three images total) */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 mt-12 md:mt-16 lg:mt-12 items-end">
+      <div className="w-full grid grid-cols-3 md:grid-cols-2 lg:grid-cols-12 gap-6 mt-12 md:mt-16 lg:mt-12 items-end">
         
         {/* Middle Left: Interior Portrait Image */}
         <div className="md:col-span-1 lg:col-span-3">
