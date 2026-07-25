@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { projects } from "../data/projectsData";
+import { projects } from "../data/ProjectsData";
 import Meet from "../pages/Meet";
 import Footer from "../pages/Footer";
 

@@ -266,13 +266,3 @@ function Project_details() {
 
 
 export default Project_details;
-
-
-
-
-
-
-
-
-
-

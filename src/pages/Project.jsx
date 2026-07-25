@@ -279,11 +279,6 @@
 
 
 
-
-
-
-
-
 // import React, { useState, useRef } from 'react';
 // import { Link } from 'react-router-dom';
 // import ResortMain from '../assets/resort-main.jpg';
@@ -616,16 +611,271 @@
 
 
 
-
-
-
-
-
-
-
-
-
 //  ______________ Side by side ______________
+
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import Bashanta from "../assets/bashanta.png";
+// import Kindergarten from "../assets/kindergarten.png";
+// import Simin from "../assets/simin.png";
+// import HospitalImg from "../assets/hospital (1).png";
+// import InteriorLobby from "../assets/jb.png";
+// import InteriorRestaurant from "../assets/sushi.png";
+// import bashantaInte from "../assets/bashantaInte.png";
+// import AKM from "../assets/akm.png";
+
+// const allProjects = [
+//   {
+//     id: "ext-resort-1",
+//     section: "exterior",
+//     category: "Resort",
+//     title: "BASHANTA BILASH",
+//     location: "Tarabo, Kachpur, Narayangonj",
+//     area: "35 Bigha +",
+//     timeline: "Outline Architects, 2020–Present",
+//     image: Bashanta,
+//   },
+//   {
+//     id: "ext-resort-2",
+//     section: "exterior",
+//     category: "Resort",
+//     title: "KIDERGARTEN MADRASSA",
+//     location: "Purbachal, Dhaka",
+//     area: "22 Bigha",
+//     timeline: "Outline Architects, 2022–2024",
+//     image: Kindergarten,
+//   },
+//   {
+//     id: "ext-villa-1",
+//     section: "exterior",
+//     category: "Villa",
+//     title: "SIMIN COMPLEX",
+//     location: "NOKLA, SHERPUR",
+//     area: "10 Katha",
+//     timeline: "Outline Architects, 2024",
+//     image: Simin,
+//   },
+//   {
+//     id: "ext-hospital-1",
+//     section: "exterior",
+//     category: "Hospital",
+//     title: "BANGLADESH EYE HOSPITAL",
+//     location: "Uttara, Dhaka",
+//     area: "1.5 Acre",
+//     timeline: "Outline Architects, 2023",
+//     image: HospitalImg,
+//   },
+//   {
+//     id: "int-resort-1",
+//     section: "interior",
+//     category: "Resort",
+//     title: "JB APARTMENT",
+//     location: "Tarabo, Kachpur, Narayangonj",
+//     area: "12,000 Sqft",
+//     timeline: "Outline Architects, 2021–Present",
+//     image: InteriorLobby,
+//   },
+//   {
+//     id: "int-rest-1",
+//     section: "interior",
+//     category: "Restaurant",
+//     title: "SUSHI SAMURAI",
+//     location: "Gulshan, Dhaka",
+//     area: "4,500 Sqft",
+//     timeline: "Outline Architects, 2023",
+//     image: InteriorRestaurant,
+//   },
+//   {
+//     id: "int-resort-2",
+//     section: "interior",
+//     category: "Resort",
+//     title: "BASHANTA BILASH",
+//     location: "Tarabo, Kachpur, Narayangonj",
+//     area: "12,000 Sqft",
+//     timeline: "Outline Architects, 2021–Present",
+//     image: bashantaInte,
+//   },
+//   {
+//     id: "int-rest-2",
+//     section: "interior",
+//     category: "Restaurant",
+//     title: "AKM RESTAURANT & CONVENTION CENTER",
+//     location: "Gulshan, Dhaka",
+//     area: "4,500 Sqft",
+//     timeline: "Outline Architects, 2023",
+//     image: AKM,
+//   },
+// ];
+
+// const categories = ["All", "Hospital", "Resort", "Restaurant", "Villa"];
+
+// function ProjectCard({ project }) {
+//   return (
+//     <Link
+//       to={`/projects/${project.id}`}
+//       className="block bg-[#e7e7e7] z-10 text-[#4f5d39] p-3 md:p-4 flex flex-col select-none shadow-sm transition-transform duration-500 hover:-translate-y-1 cursor-pointer"
+//     >
+//       {/* Title overlaps the top of the image */}
+//       <div className="text-center relative z-20 pointer-events-none">
+//         <h3 className="text-xl md:text-3xl mb-1 md:mb-2 font-serif tracking-wide font-semibold text-[#4f5d39] drop-shadow-md">
+//           {project.title}
+//         </h3>
+//       </div>
+
+//       {/* Image */}
+//       <div className="w-full h-44 md:h-70 overflow-hidden bg-neutral-900/10">
+//         <img
+//           src={project.image}
+//           alt={project.title}
+//           loading="lazy"
+//           className="w-full h-full object-cover object-[center_48%] transition-transform duration-700 hover:scale-105"
+//         />
+//       </div>
+
+//       {/* Technical specs */}
+//       <div className="grid grid-cols-3 gap-2 border-t border-white/20 mt-3 pt-3 text-[10px] md:text-[11px] tracking-wide font-sans text-[#4f5d39]">
+//         <div className="flex flex-col space-y-0.5">
+//           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
+//             Location
+//           </span>
+//           <span className="font-bold leading-snug text-[#4f5d39]">
+//             {project.location}
+//           </span>
+//         </div>
+//         <div className="flex flex-col space-y-0.5 border-l border-white/20 pl-3">
+//           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
+//             Scale
+//           </span>
+//           <span className="font-bold">{project.area}</span>
+//         </div>
+//         <div className="flex flex-col space-y-0.5 border-l border-white/20 pl-3">
+//           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
+//             Credits
+//           </span>
+//           <span className="font-bold leading-snug">{project.timeline}</span>
+//         </div>
+//       </div>
+//     </Link>
+//   );
+// }
+
+// function Project() {
+//   const [exteriorFilter, setExteriorFilter] = useState("All");
+//   const [interiorFilter, setInteriorFilter] = useState("All");
+
+//   const getFiltered = (section, filter) =>
+//     allProjects.filter(
+//       (p) =>
+//         p.section === section && (filter === "All" || p.category === filter),
+//     );
+
+//   const exteriorProjects = getFiltered("exterior", exteriorFilter);
+//   const interiorProjects = getFiltered("interior", interiorFilter);
+
+//   const renderFilterNavbar = (currentFilter, setFilter) => (
+//     <div className="flex z-10 flex-wrap items-center gap-6 text-[12px] tracking-wider font-sans mt-6 mb-2 pb-3 text-neutral-500 mb-12 border-b border-neutral-100">
+//       {categories.map((cat) => (
+//         <button
+//           key={cat}
+//           onClick={() => setFilter(cat)}
+//           className={`transition-colors duration-300 ${
+//             currentFilter === cat
+//               ? "text-[#4f5d39] font-medium"
+//               : "hover:text-[#4f5d39]"
+//           }`}
+//         >
+//           {cat}
+//         </button>
+//       ))}
+//     </div>
+//   );
+
+//   const renderSection = (
+//     title,
+//     projects,
+//     filter,
+//     setFilter,
+//     link,
+//     linkLabel,
+//     extraClass = "",
+//   ) => (
+//     <div className={`space-y-2 z-10 ${extraClass}`}>
+//       <h2 className="text-4xl md:text-5xl font-serif text-[#4f5d39] tracking-wide border-b border-neutral-200 pb-3 ">
+//         {title}
+//       </h2>
+//       {renderFilterNavbar(filter, setFilter)}
+
+//       {projects.length > 0 ? (
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+//           {projects.map((p) => (
+//             <ProjectCard key={p.id} project={p} />
+//           ))}
+//         </div>
+//       ) : (
+//         <div className="text-center py-12 border border-dashed border-neutral-200">
+//           <p className="text-sm text-neutral-400 font-light">
+//             No works match this selection.
+//           </p>
+//         </div>
+//       )}
+
+//       {/* Enlarged "Explore more" link */}
+//       <div className="pt-6 flex justify-end">
+//         <Link
+//           to={link}
+//           className="inline-flex items-center gap-2 text-base md:text-md font-serif font-medium text-neutral-600 hover:text-[#4f5d39] transition-all hover:translate-x-1"
+//         >
+//           {linkLabel}{" "}
+//           <span className="text-xl md:text-2xl leading-none">&rarr;</span>
+//         </Link>
+//       </div>
+//     </div>
+//   );
+
+//   return (
+//     <section
+//       id="projects"
+//       className="relative z-10 w-full px-4 md:px-12 lg:px-20 py-12 bg-[#ffffff] space-y-16"
+//     >
+//       {/* Top Title */}
+//       <h1 className="text-2xl md:text-4xl mt-10 sm:mb-15 mb-6 font-serif font-normal text-[#4f5d39] tracking-tight border-b-1 border-[#e7eedb] pb-4 text-center">
+//         SOME OF OUR PROJECTS
+//       </h1>
+
+//       {renderSection(
+//         "Exterior Architecture",
+//         exteriorProjects,
+//         exteriorFilter,
+//         setExteriorFilter,
+//         "/projects",
+//         "Explore more exterior projects",
+//       )}
+
+//       {renderSection(
+//         "Interior Architecture",
+//         interiorProjects,
+//         interiorFilter,
+//         setInteriorFilter,
+//         "/projects",
+//         "Explore more interior projects",
+//       )}
+//     </section>
+//   );
+// }
+
+// export default Project;
+
+
+
+
+
+
+
+
+
+
+
+
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -638,9 +888,10 @@ import InteriorRestaurant from "../assets/sushi.png";
 import bashantaInte from "../assets/bashantaInte.png";
 import AKM from "../assets/akm.png";
 
+// Updated IDs match ProjectData.js exactly
 const allProjects = [
   {
-    id: "ext-resort-1",
+    id: "bashanta-bilash",
     section: "exterior",
     category: "Resort",
     title: "BASHANTA BILASH",
@@ -650,7 +901,7 @@ const allProjects = [
     image: Bashanta,
   },
   {
-    id: "ext-resort-2",
+    id: "kindergarten-madrassa",
     section: "exterior",
     category: "Resort",
     title: "KIDERGARTEN MADRASSA",
@@ -660,7 +911,7 @@ const allProjects = [
     image: Kindergarten,
   },
   {
-    id: "ext-villa-1",
+    id: "simin-complex",
     section: "exterior",
     category: "Villa",
     title: "SIMIN COMPLEX",
@@ -670,7 +921,7 @@ const allProjects = [
     image: Simin,
   },
   {
-    id: "ext-hospital-1",
+    id: "bangladesh-eye-hospital",
     section: "exterior",
     category: "Hospital",
     title: "BANGLADESH EYE HOSPITAL",
@@ -680,7 +931,7 @@ const allProjects = [
     image: HospitalImg,
   },
   {
-    id: "int-resort-1",
+    id: "jb-apartment",
     section: "interior",
     category: "Resort",
     title: "JB APARTMENT",
@@ -690,7 +941,7 @@ const allProjects = [
     image: InteriorLobby,
   },
   {
-    id: "int-rest-1",
+    id: "sushi-samurai",
     section: "interior",
     category: "Restaurant",
     title: "SUSHI SAMURAI",
@@ -700,17 +951,17 @@ const allProjects = [
     image: InteriorRestaurant,
   },
   {
-    id: "int-resort-2",
+    id: "bashanta-interior",
     section: "interior",
     category: "Resort",
-    title: "BASHANTA BILASH",
+    title: "BASHANTA BILASH INTERIOR",
     location: "Tarabo, Kachpur, Narayangonj",
     area: "12,000 Sqft",
     timeline: "Outline Architects, 2021–Present",
     image: bashantaInte,
   },
   {
-    id: "int-rest-2",
+    id: "akm-restaurant",
     section: "interior",
     category: "Restaurant",
     title: "AKM RESTAURANT & CONVENTION CENTER",
@@ -729,14 +980,12 @@ function ProjectCard({ project }) {
       to={`/projects/${project.id}`}
       className="block bg-[#e7e7e7] z-10 text-[#4f5d39] p-3 md:p-4 flex flex-col select-none shadow-sm transition-transform duration-500 hover:-translate-y-1 cursor-pointer"
     >
-      {/* Title overlaps the top of the image */}
-      <div className="text-center relative z-20 pointer-events-none">
+      <div className="text-center relative z-20">
         <h3 className="text-xl md:text-3xl mb-1 md:mb-2 font-serif tracking-wide font-semibold text-[#4f5d39] drop-shadow-md">
           {project.title}
         </h3>
       </div>
 
-      {/* Image */}
       <div className="w-full h-44 md:h-70 overflow-hidden bg-neutral-900/10">
         <img
           src={project.image}
@@ -746,7 +995,6 @@ function ProjectCard({ project }) {
         />
       </div>
 
-      {/* Technical specs */}
       <div className="grid grid-cols-3 gap-2 border-t border-white/20 mt-3 pt-3 text-[10px] md:text-[11px] tracking-wide font-sans text-[#4f5d39]">
         <div className="flex flex-col space-y-0.5">
           <span className="text-[#4f5d39] text-[9px] uppercase tracking-wider font-semibold">
@@ -833,7 +1081,6 @@ function Project() {
         </div>
       )}
 
-      {/* Enlarged "Explore more" link */}
       <div className="pt-6 flex justify-end">
         <Link
           to={link}
@@ -851,7 +1098,6 @@ function Project() {
       id="projects"
       className="relative z-10 w-full px-4 md:px-12 lg:px-20 py-12 bg-[#ffffff] space-y-16"
     >
-      {/* Top Title */}
       <h1 className="text-2xl md:text-4xl mt-10 sm:mb-15 mb-6 font-serif font-normal text-[#4f5d39] tracking-tight border-b-1 border-[#e7eedb] pb-4 text-center">
         SOME OF OUR PROJECTS
       </h1>

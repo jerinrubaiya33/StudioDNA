@@ -58,7 +58,7 @@ function Hero() {
     <div 
       className={`relative z-30 flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 pt-75 sm:pt-24 text-center transition-colors duration-700 ease-out shadow-[0_-20px_50px_rgba(0,0,0,0.3)] 
         w-full aspect-video md:h-auto md:min-h-[70vh] md:max-h-[680px] 
-        -mt-36 sm:-mt-28 md:-mt-34 select-none
+        -mt-42 sm:-mt-28 md:-mt-34 select-none
         ${isPlaying ? "bg-[#3c472b]" : "bg-[#2a2c2a]"}`}
     >
       {/* Top Progress Bar */}
